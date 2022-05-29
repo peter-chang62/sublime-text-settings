@@ -1,0 +1,11 @@
+{
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+
+	// Columns in which to display vertical rulers
+	"rulers": [120],
+	"color_scheme": "Mariana.sublime-color-scheme",
+	"font_size": 13,
+}
