@@ -1,41 +1,33 @@
 {
-    /*
-        Autoformat files on save
-
-        This option is disabled by default, AutoPEP8 is really slow and it get
-        the file buffer read only while its working in the background.
-
-        Use this at your own risk.
-    */
-    "auto_formatting": false,
-    /*
-        If this is set to false, anaconda will not underline errors.
-    */
-    "anaconda_linter_underlines": false,
-    /*
-        If 'outline' (default), anaconda will outline error lines.
-        If 'fill', anaconda will fill the lines.
-        If 'solid_underline', anaconda will draw a solid underline below regions.
-        If 'stippled_underline', anaconda will draw a stippled underline below regions.
-        If 'squiggly_underline', anaconda will draw a squiggly underline below regions.
-        If 'none', anaconda will not draw anything on error lines.
-    */
-    "anaconda_linter_mark_style": "none",
-    /*
-        A list of pep8 error numbers to ignore.
-        The list of error codes is in this file:
-            https://pycodestyle.readthedocs.io/en/latest/intro.html#error-codes.
-        Search for "Ennn:", where nnn is a 3-digit number.
-        E309 is ignored by default as it conflicts with pep257 E211
-        W503 is ignored by default as it conflicts with pep8 W504
-    */
     "pep8_ignore":
     [
         "E309",
         "W503",
-        "W191"
+        "W504",
+        "E402",
+        "E501",
+        "E731",
+        "E203",
+        "E741",
     ],
 
-    // Maximum line length for pep8
-    "pep8_max_line_length": 120,
+    /*
+        Set those as true if you don't want Sublime Text regular completions
+    */
+    "suppress_word_completions": true,
+    "suppress_explicit_completions": true,
+
+    /*
+        Default python interpreter
+
+        This can (and should) be overridden by project settings.
+
+        NOTE: if you want anaconda to lint and complete using a remote
+        python interpreter that runs the anaconda's minserver.py script
+        in a remote machine just use it's address:port as interpreter
+        for example:
+
+            "python_interpreter": "tcp://my_remote.machine.com:19360"
+    */
+    "python_interpreter": "/home/peterchang/miniconda3/envs/idp/bin/python",
 }

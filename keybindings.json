@@ -1,28 +1,28 @@
 [
+    { "keys": ["ctrl+alt+t"], "command": "open_terminal_project_folder" },
+    { 
+        "keys": ["alt+t"], "command": "terminus_open", "args": {
+            "cwd": "${file_path:${folder}}",
+            "shell_cmd": "/home/peterchang/miniconda3/envs/idp/bin/ipython",
+            "post_window_hooks": [
+                ["carry_file_to_pane", {"direction": "right"}]
+            ],
+            "title": "console",
+        }
+    },
+    { 
+        "keys": ["ctrl+w"], "command": "terminus_close", "context": [{ "key": "terminus_view"}]
+    },
     {
-    	"command": "anaconda_goto", "keys": ["ctrl+alt+g"], "context": [
+       "keys": [
+           "ctrl+alt+l"
+       ],
+       "command": "black"
+    },
+
+    {
+        "command": "anaconda_doc", "keys": ["ctrl+shift+space"], "context": [
             {"key": "selector", "operator": "equal", "operand": "source.python"}
-        ]},
-    {
-    	"command": "anaconda_find_usages", "keys": ["ctrl+alt+f"], "context": [
-            {"key": "selector", "operator": "equal", "operand": "source.python"}
-        ]},
-    {
-    	"command": "anaconda_doc", "keys": ["ctrl+space"], "context": [
-            {"key": "selector", "operator": "equal", "operand": "source.python"}
-        ]},
-    {
-    	"command": "anaconda_auto_format", "keys": ["ctrl+alt+l"], "context": [
-            {"key": "selector", "operator": "equal", "operand": "source.python"}
-        ]},
-    {
-        "command": "anaconda_fill_funcargs", "keys": ["tab"], "context": [
-            {"key": "selector", "operator": "equal", "operand": "source.python"},
-            {"key": "anaconda_insert_funcargs"}
-        ]},
-    {
-        "command": "anaconda_fill_funcargs", "keys": ["ctrl+tab"], "args": {"all": true}, "context": [
-            {"key": "selector", "operator": "equal", "operand": "source.python"},
-            {"key": "anaconda_insert_funcargs"}
-        ]}
+        ]
+    },
 ]
